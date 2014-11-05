@@ -34,7 +34,7 @@
         <div class='content'>
             <h2 class='title'></h2>
             <div class='imgcontainer'>
-                <img src='' id='img' />
+                <img class='' data-id='' src='' id='img' />
             </div>
             <div id='loading'>
                 <div class='text'>
@@ -75,5 +75,6 @@
         <script src='js/vector.js'></script>
         <script src='js/ui.js'></script>
         <script src='js/analytics.js'></script>
+        <script src='js/gfycat.js'></script>
     </body>
 </html>

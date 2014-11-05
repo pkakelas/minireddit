@@ -15,6 +15,10 @@ var Render = {
 
         var actualURL = getImage(post.url);
 
+        if ( actualURL.indexOf("http") == -1) {
+            gfyName = actualURL;
+        }
+
         // this intentionally left unescaped; reddit sends this including HTML entities that must be rendered correctly
         // we trust reddit to do the escaping correctly
         $('h2.title').html(post.title);
@@ -45,7 +49,14 @@ var Render = {
         };
 
         Render.startLoadingTime = (new Date()) | 0;
-        $('#img').attr('src', actualURL);
+
+        if (typeof gfyName != 'undefined') {
+            $('#img').attr('src', actualURL);
+        }
+        else {
+            $('#img').attr('data-id', gfyName);
+            $('#img').attr('class', 'gfyitem');
+        }
     },
     end: function() {
         $('#img').hide();

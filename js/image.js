@@ -3,6 +3,12 @@
 function getImage(url) {
     switch (url.substr(-4).toLowerCase()) {
         case '.gif':
+            $.get( "http://gfycat.php",
+                { url: encodeURLComponent(url) },
+                function(data) {
+                    alert('page content: ' + data);
+                }
+            );
         case '.jpg':
         case '.png':
             return url;
