@@ -50,7 +50,7 @@ var Render = {
 
         Render.startLoadingTime = (new Date()) | 0;
 
-        if (typeof gfyName != 'undefined') {
+        if (typeof gfyName == 'undefined') {
             $('#img').attr('src', actualURL);
         }
         else {
