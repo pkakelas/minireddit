@@ -4,7 +4,7 @@
         ob_start();
         curl_exec( $curl );
         $result = json_decode( ob_get_clean() );
-        return = $result->gfyname;
+        return $result->gfyname;
     }
 
     function checkIfKnown( $url ) {
