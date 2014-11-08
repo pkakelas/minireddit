@@ -24,7 +24,7 @@ var Render = {
                 async: false,
                 data: { url: encodeURIComponent(actualURL) },
                 success: function(data) {
-                    console.log( 'Converted to .gfy' )
+                    console.log('Converted ' + actualURL + ' to .gfy');
                     gfyName = data;
                 }
             });

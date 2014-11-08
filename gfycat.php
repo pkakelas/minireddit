@@ -29,6 +29,6 @@
         exit();
     }
     else { 
-        echo false; 
+        exit(1);
     }
 ?>
