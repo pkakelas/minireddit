@@ -62,6 +62,7 @@
             <div style='clear:both'></div>
         </div>
         <script src='http://code.jquery.com/jquery-1.8.1.min.js'></script>
+        <script src='js/gfycat.js'></script>
         <script src='js/json2.js'></script>
         <script src='js/reddit.js'></script>
         <script src='js/string.js'></script>
@@ -75,6 +76,5 @@
         <script src='js/vector.js'></script>
         <script src='js/ui.js'></script>
         <script src='js/analytics.js'></script>
-        <script src='js/gfycat.js'></script>
     </body>
 </html>

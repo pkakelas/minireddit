@@ -14,9 +14,20 @@ var Render = {
         console.log('render(' + post.title + ')');
 
         var actualURL = getImage(post.url);
+        var gfyName;
 
-        if ( actualURL.indexOf("http") == -1) {
-            gfyName = actualURL;
+        //move to another file
+        if( actualURL.indexOf(".gif") > -1 ) {
+            $.ajax({
+                url: "gfycat.php",
+                type: 'GET',
+                async: false,
+                data: { url: encodeURIComponent(actualURL) },
+                success: function(data) {
+                    console.log( 'Converted to .gfy' )
+                    gfyName = data;
+                }
+            });
         }
 
         // this intentionally left unescaped; reddit sends this including HTML entities that must be rendered correctly

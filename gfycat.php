@@ -23,8 +23,10 @@
         $exists = checkIfKnown( $url );
         if ( $exists != false ) {
             echo $exists;
+            exit();
         }
         echo convertToGfy( $url );
+        exit();
     }
     else { 
         echo false; 
